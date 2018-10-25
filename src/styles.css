@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import './assets/css/reset.css';
+@import './assets/css/icons-material.css';
+@import './assets/css/roboto.css';
+
+a {
+    color: #000;
+}
+
+.menu-icon > a {
+    color: #fff !important;
+}
+
+.mat-snack-bar-handset {
+    width: 60% !important;
+    justify-content: center !important;
+}
+
+snack-bar-container.error-snackbar {
+    background: #d32f2f;
+    width: 60%;
+}
+  
+snack-bar-container.success-snackbar {
+    background: #59a71a;
+}
+  
+
+.mat-form-field-flex {
+    display: inline-flex;
+    align-items: baseline;
+    width: 100%;
+    display: inline-flex;
+    align-items: baseline;
+    width: 100%;
+    background: white;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    border-radius: 2px;
+    box-shadow: 0 5px 7px -1px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.mat-form-field-placeholder {
+    overflow: initial !important;
+}
+
+.mat-form-field-empty{
+    line-height: 4px !important;
+}
+
+.mat-dialog-actions {
+    padding: 0 !important;
+}
+
+.mat-card-content {
+    display: block;
+    padding-left: 16px !important;
+    padding-bottom: 13px !important;
+    border-radius: 0px 0px 8px 8px !important;
+}
+
+.mat-card-actions, .mat-card-subtitle, .mat-card-title {
+    padding-left: 16px !important;
+}
+
+.mat-dialog-actions:last-child{
+    margin-bottom: 0px !important;
+}
+
+html {
+    scroll-behavior: smooth
+  }

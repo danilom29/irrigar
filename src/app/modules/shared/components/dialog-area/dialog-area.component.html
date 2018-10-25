@@ -1,0 +1,27 @@
+<h6 mat-dialog-title style="font-size: 14px;" *ngIf="!eficiencia">Área do vaso</h6>
+<form [formGroup]="areaForm" *ngIf="!eficiencia">
+  <div mat-dialog-content style="margin-bottom: 20px;">
+    <div class="example-container" >
+      <mat-form-field >
+        <input matInput formControlName="raio" type="number" placeholder="Diametro superior do vaso(cm)">
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="dialog-action"> 
+    <button mat-raised-button (click)="dialogRef.close({data: ''})" color="warn">Cancelar</button> 
+    <button mat-raised-button (click)="calcularArea()" color="primary" [disabled]="!areaForm.valid">Calcular</button>    
+  </div> 
+</form>
+
+<h6 mat-dialog-title style="font-size: 14px;" *ngIf="eficiencia">Eficiência Irrigação Localizada</h6>
+<form [formGroup]="eficienciaForm" *ngIf="eficiencia">
+  <div class="example-container" >
+    <mat-radio-group formControlName="eficiencia">
+      <mat-radio-button *ngFor="let data of dataEficiencia" [value]="data.value">{{data.value}}</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div mat-dialog-actions class="dialog-action"> 
+    <button mat-raised-button (click)="dialogRef.close({data: ''})" color="warn">Cancelar</button> 
+    <button mat-raised-button (click)="setarEficiencia()" color="primary" [disabled]="!eficienciaForm.valid">Selecionar</button>    
+  </div> 
+</form>

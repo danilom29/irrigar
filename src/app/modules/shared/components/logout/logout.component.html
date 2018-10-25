@@ -1,0 +1,20 @@
+<!-- <span *ngIf="errors.length < 1">
+  <a (click)="logout()">
+    <mat-icon class="mat-18">{{mdIcon}}</mat-icon>
+  </a>
+</span>
+
+<span *ngIf="errors.length > 0">
+  <mat-error *ngFor="let error of errors">{{error.cod}} - {{error.message}}</mat-error>
+</span> -->
+
+<button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="errors.length < 1">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>{{mdIcon}}</mat-icon>
+    <span>Sair</span>
+  </button> 
+</mat-menu>
+  

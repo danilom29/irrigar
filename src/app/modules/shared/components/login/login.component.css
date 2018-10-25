@@ -1,0 +1,38 @@
+/deep/  .mat-form-field-label{
+    overflow: unset !important;
+}   
+
+/deep/  .mat-form-field-label{
+    overflow: unset !important;
+}  
+
+/deep/ .mat-form-field-label-wrapper{
+    overflow: unset !important;
+    top: -11px !important;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container > * {
+    width: 100%;
+}
+
+.user-avatar{
+    width: 200px;
+}
+
+.center{
+    text-align: center;
+    margin-top: -50px;
+}
+
+.link-cad{ 
+    margin-top: 5px;
+    color: black;
+    cursor: pointer;
+    width: 129px !important;
+    text-decoration: underline;
+} 

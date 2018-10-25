@@ -1,0 +1,27 @@
+.mat-radio-button {
+    padding-right: 16px;
+    font-size: 14px;
+}
+
+.mat-form-field{
+    width: 100%;
+}
+
+.dialog-action{
+    text-align: center; 
+    display: block;
+    margin-top: 15px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container > * {
+    width: 100% !important;
+}
+
+.mg-20{
+    margin-bottom: 20px;
+}

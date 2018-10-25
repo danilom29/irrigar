@@ -1,0 +1,63 @@
+<!-- <mat-card>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="errors.length < 1">
+  
+      
+
+    <div class="example-container">
+        <mat-form-field>
+        <input matInput formControlName="login" type="text"
+        placeholder="E-mail" maxlength="191">
+      </mat-form-field>
+    </div>
+
+    <div class="example-container">
+        <mat-form-field>
+      <input matInput formControlName="password" type="password"
+      placeholder="Senha" maxlength="191">
+    </mat-form-field>
+  </div>
+
+
+  <mat-card-actions>
+
+    <button style="margin-right:16px;" mat-raised-button type="submit"
+    color="primary" [disabled]="!loginForm.valid">
+      Entrar
+    </button>
+
+    <a mat-button (click)="onForgotPassword()"
+    *ngIf="params.forgotPassword">Esqueci a senha</a>
+  </mat-card-actions>  
+
+</form>
+</mat-card>  -->
+ 
+<div layout="column" layout-padding layout-align="center center" class="center"> 
+  <img class="user-avatar" src="assets/img/logo.png" width="150px">
+</div>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="errors.length < 1">
+  <div class="example-container">
+    <mat-form-field>
+      <mat-icon matPrefix>email</mat-icon> 
+      <input matInput formControlName="email" type="text" placeholder="E-mail" maxlength="191">
+    </mat-form-field>
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-icon matPrefix>lock</mat-icon> 
+      <input matInput formControlName="password" type="password" placeholder="Senha" maxlength="191">
+    </mat-form-field>
+  </div>
+  <div class="example-container">
+    <button mat-raised-button type="submit" color="primary" [disabled]="!loginForm.valid">Login</button>
+  </div> 
+  <div class="example-container">
+      <a (click)="openCadastro()" class="link-cad">
+        <b>Criar conta</b> 
+      </a>
+      <a (click)="forgotPassword()" class="link-cad">
+        <b>Esqueci a senha</b> 
+      </a>
+  </div>
+</form>

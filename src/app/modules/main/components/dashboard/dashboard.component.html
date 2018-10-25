@@ -1,0 +1,55 @@
+<div class="div-center">
+  <!-- <div class="div-center"> -->
+  <!-- </div> -->
+</div>
+<div class="div-center">
+  <form [formGroup]="culturaForm">
+    <div class="container-search">
+      <mat-form-field>
+        <mat-select placeholder="Cultura" formControlName="id">
+          <mat-option *ngFor="let data of arrayCulture" [value]="data.id">
+            {{ data.descricao }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- <button mat-button type="submit" color="primary" [disabled]="!culturaForm.valid" (click)="readData(culturaForm.value.id)">
+      </button> -->
+      <mat-icon mat-list-icon [ngClass]="{'not-click': !culturaForm.valid}" (click)="readData(culturaForm.value.id)">search</mat-icon>
+      <div>
+        <img src="assets/img/logo.png" width="50px">
+      </div>
+    </div>
+    <div>
+    </div>
+  </form>
+</div>
+<div *ngIf="loading">
+  <button mat-raised-button color="primary" (click)="print('pdf')" [ngStyle]="{'margin-left': '5px'}">
+    <mat-icon>picture_as_pdf</mat-icon>
+  </button>
+  <button mat-raised-button color="primary" (click)="print('xlsx')" [ngStyle]="{'margin-left': '5px'}">
+    <mat-icon>assignment</mat-icon>
+  </button>
+  <div class="scroll">
+    <mat-list *ngFor="let data of arraySource">
+      <mat-list-item style="margin: 0px 3px; background: white;">
+        <mat-icon mat-list-icon [ngStyle]="{'color': '#0d47a1'}">opacity</mat-icon>
+        <div id="item">
+          <div [ngStyle]="{'line-height': '30px'}">{{data.data_inclusao}}</div>
+          <div>ETc: {{data.etc}} <br> ETo: {{data.eto}}</div>
+          <div>Resultado: {{data.resultado}} ml <br> 30% ml: {{data.trinta}} ml</div>
+  
+        </div>
+      </mat-list-item>
+      <!-- <mat-divider></mat-divider> -->
+    </mat-list>
+  </div>
+</div>
+
+<div *ngIf="!loading">
+  <h6 class="empty">Nenhum resultado cadastrado.</h6>
+</div>
+
+<div class="loading-spinner" *ngIf="progress">
+  <mat-progress-spinner [color]="color" [mode]="mode" style="margin: auto;"></mat-progress-spinner>
+</div>

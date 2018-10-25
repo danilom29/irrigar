@@ -1,0 +1,9 @@
+<h6 mat-dialog-title style="font-size: 14px;">Atenção!</h6>
+<div mat-dialog-content style="margin-bottom: 20px;">
+    {{ menssagem }}
+</div>
+<div mat-dialog-actions [ngStyle]="{'text-align': 'center', 'display': 'block'}"> 
+  <button mat-raised-button (click)="dialogRef.close()" color="primary">
+    OK
+  </button>
+</div>

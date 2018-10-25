@@ -1,0 +1,84 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/deep/ .mat-form-field-label{
+    overflow: unset !important;
+}
+
+/deep/ .mat-form-field-label-wrapper{
+    overflow: unset !important;
+    top: -11px !important;
+}
+
+.modal{
+    cursor: pointer;
+}
+
+.new-div{
+    padding-top: 70px;
+    overflow: scroll;
+    height: 100vh;
+    display: block;
+}
+
+.mat-card{
+    padding: 5px 24px 0 24px !important;
+}
+
+.card-result{
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: linear-gradient(#5ac5f2, #3072e0);
+    color: white;
+}
+.example-container > * {
+    width: 100%;
+}
+
+.div-center{
+    margin: auto;
+    width: 80%;
+}
+
+.mt15{
+    margin-top: 14px !important;
+}
+
+.divider-content{
+    border-top: solid 1px #ccc
+}
+
+.mat-radio-button {
+    padding-right: 16px;
+    color: #9b9b9b;
+}
+
+span{
+    font-size: 13px;
+    margin: 5px;
+}
+
+.mg-20{ 
+    margin-bottom: 20px;
+}
+
+.back{
+    margin: 15px 0px 0px 15px;
+}
+
+.scroll{
+    max-height: 52vh;
+    overflow-y: scroll;
+}
+
+.user-avatar{
+    width: 160px;
+    margin-top: 15px;
+}
+
+.center{
+    text-align: center;
+    margin-top: -50px;
+}

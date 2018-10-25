@@ -1,0 +1,82 @@
+#menu-sidenav {
+    float: left;
+    margin-top: 0;
+    width: 50px;
+}
+
+#title {
+    float: left;
+    margin-top: 20px;
+}
+
+.sair{
+    float: right;
+    margin: 5px 0 0 auto;
+}
+
+.toolbar {
+    background: #146cb3 !important;
+    color: #fff !important;
+}
+
+#area-text { 
+    color: #888886;
+    font-size: 16px;
+    border-left: solid 1px #fff;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#menu-sidenav {
+    float: left; 
+    height: 70px;
+    margin-top: 47px;
+}
+
+#main-zone {
+    /* height: 125vh; */
+    margin-top: 75px;
+}
+
+.inner-toolbar-closed-menu #title {
+    margin-left: 40px;
+}
+
+.outer-toolbar-closed-menu {
+    border-bottom: solid 1px rgb(212, 212, 212);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.inner-toolbar-opened-menu {
+    border-bottom: solid 1px rgb(212, 212, 212);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.outer-router-outlet-opened-menu {
+    width: 100%;
+}
+
+.outer-router-outlet-closed-menu {
+    width: 100%;
+}
+
+.inner-router-outlet-opened-menu {
+    margin-left: 250px;
+}
+
+.outer-toolbar-opened-menu {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.outer-toolbar-opened-menu #logo-senai a {
+    margin-left: 220px; 
+}

@@ -1,0 +1,17 @@
+.bonamondo-login #bonamondo-login {
+    padding: 39px 38px;
+} 
+
+.center-div
+{
+  margin: auto;
+  width: 80%;
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    vertical-align: middle;
+    /* background-color: #146cb3; */
+}
+

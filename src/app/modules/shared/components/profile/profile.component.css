@@ -1,0 +1,28 @@
+.div-center{
+    margin: auto;
+    width: 80%;
+}
+
+#app-profile{
+    height: 80vh;
+    display: flex;
+    vertical-align: middle;
+}
+
+/deep/ .mat-form-field-label{
+    overflow: unset !important;
+}
+
+/deep/ .mat-form-field-label-wrapper{
+    overflow: unset !important;
+    top: -11px !important;
+}
+
+.link-cad{ 
+    margin-top: 5px;
+    color: black;
+    cursor: pointer;
+    width: 129px !important;
+    text-decoration: underline;
+    font-size: 13px;
+}

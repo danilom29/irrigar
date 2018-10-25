@@ -1,0 +1,52 @@
+<form [formGroup]="kcForm">
+  <div class="mg-20">
+    <mat-checkbox formControlName="hideKc" (click)="hideKc()">Inserir nova cultura(Kc)</mat-checkbox>
+  </div>
+  <div class="example-container" > 
+    <mat-form-field class="example-full-width">
+      <input placeholder="Cultura" aria-label="Cultura" matInput [formControl]="optionsCtrl" [matAutocomplete]="auto" formControlName="culture_id" [(ngModel)]="kcForm.value.culture_id" >
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let data of filteredOptions | async" [value]="data">
+          {{ data.descricao }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  
+  <div class="example-container" >
+    <mat-form-field>
+      <mat-select placeholder="Informe o estágio" formControlName="stage_id">
+        <mat-option *ngFor="let data of estagios" value="{{data.id}}">{{data.descricao}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="example-container" >
+    <mat-radio-group formControlName="umidade_maior_setenta">
+      <mat-radio-button value="1">sob alta umidade (URmín > 70%)</mat-radio-button>
+      <mat-radio-button value="0">sob baixa umidade (URmín < 20%)</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="example-container" *ngIf="kcForm.value.hideKc" [ngStyle]="{'margin-top':'15px'}">
+    <mat-form-field >
+      <input matInput formControlName="kc" type="number" placeholder="Kc">
+    </mat-form-field>
+  </div>
+<br *ngIf="!kcForm.value.hideKc && dataKc">
+  <div class="example-container" >
+    <mat-radio-group formControlName="kc_value">
+      <mat-radio-button *ngFor="let data of dataKc" [value]="data.kc">{{data.kc}}</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div style="text-align: center; padding-top: 5px;" *ngIf="!kcForm.value.hideKc">
+    <button mat-raised-button (click)="readDataValueKc()" [disabled]="!kcForm.valid">Consultar</button>
+  </div>
+
+  <div mat-dialog-actions class="dialog-action"> 
+    <button mat-raised-button (click)="dialogRef.close({data: ''})" color="warn">Cancelar</button>
+    <button mat-raised-button (click)="selecionaKc()" color="primary" *ngIf="kcForm.value.kc_value">OK</button>    
+    <button mat-raised-button (click)="createDataValueKc()" color="primary" [disabled]="!kcForm.valid" *ngIf="kcForm.value.hideKc">Salvar</button>    
+  </div> 
+</form>

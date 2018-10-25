@@ -1,0 +1,36 @@
+/deep/ .mat-form-field-label{
+    overflow: unset !important;
+}
+
+/deep/ .mat-form-field-label-wrapper{
+    overflow: unset !important;
+    top: -11px !important;
+}
+
+.login{
+    display: flex;
+    vertical-align: middle;
+    height: 100vh;
+    /* background-color: #146cb3; */
+}
+
+.div-center{
+    /* position: absolute; */
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    border-radius: 3px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.example-container > * {
+    width: 100%;
+}
